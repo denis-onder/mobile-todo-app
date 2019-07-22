@@ -1,0 +1,27 @@
+{
+  "name": "mobile-todos",
+  "version": "1.0.0",
+  "description": "Todo App -> React Native",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "tsc && nodemon .",
+    "test": "exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/denis-onder/"
+  },
+  "author": "Denis Onder",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/express": "^4.17.0",
+    "@types/node": "^12.6.8",
+    "concurrently": "^4.1.1",
+    "eslint": "^6.1.0",
+    "nodemon": "^1.19.1",
+    "typescript": "^3.5.3"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
