@@ -1,10 +1,14 @@
 import express from "express";
 import config from "./config";
+import router from "./router";
+import initGql from "./gql/init";
 
 class Server {
   public app: express.Application;
   constructor() {
     this.app = express();
+    this.app.use(router);
+    initGql(this.app);
   }
   /**
    * Start the server
@@ -17,6 +21,12 @@ class Server {
         }\nAddress: http://localhost:${config.port}`
       )
     );
+  }
+  /**
+   * Stop the server
+   */
+  public stop(err = false) {
+    process.exit(err ? 1 : 0);
   }
 }
 
