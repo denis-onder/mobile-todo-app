@@ -17,7 +17,7 @@ class Server {
     this.app.listen(config.port, () =>
       console.log(
         `Server running! \nEnvironment: ${
-          config.env === "development" ? config.env : config.env + " container"
+          config.env === "docker" ? config.env + " container" : config.env
         }\nAddress: http://localhost:${config.port}`
       )
     );
