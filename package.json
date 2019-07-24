@@ -4,7 +4,8 @@
   "description": "Todo App -> React Native",
   "main": "dist/index.js",
   "scripts": {
-    "start": "tsc && nodemon .",
+    "start": "tsc && node .",
+    "dev": "ts-node-dev src/index.ts",
     "test": "exit 0"
   },
   "repository": {
@@ -20,7 +21,7 @@
     "@types/graphql": "^14.2.3",
     "@types/node": "^12.6.8",
     "concurrently": "^4.1.1",
-    "nodemon": "^1.19.1",
+    "ts-node-dev": "^1.0.0-pre.40",
     "typescript": "^3.5.3"
   },
   "dependencies": {
