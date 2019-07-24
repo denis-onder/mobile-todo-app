@@ -10,7 +10,7 @@ class InputValidator {
   /**
    * Validate the inputs provided for creating todos
    */
-  public todo(data: ITodoCreation) {
+  public todo(data: ITodoCreation): IValidationErrors {
     this.resetErrors();
     if (data.body === "") this.errors.todoBodyEmpty = errorTypes.todoBodyEmpty;
     if (data.body.length < 3)
@@ -19,7 +19,7 @@ class InputValidator {
       this.errors.todoBodyInvalid = errorTypes.todoBodyInvalid;
     return this.checkErrors();
   }
-  private checkErrors() {
+  private checkErrors(): any {
     this.errors === {} ? false : this.errors;
   }
   private resetErrors() {

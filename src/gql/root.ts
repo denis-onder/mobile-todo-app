@@ -1,14 +1,15 @@
-import { GraphQLObjectType, GraphQLList, GraphQLString } from "graphql";
+import { GraphQLObjectType, GraphQLList } from "graphql";
 import todoType from "./todoType";
+import Todo from "../models/Todo";
 
 export default new GraphQLObjectType({
   name: "Query",
   description: "Root Query",
   fields: () => ({
     todo: {
-      type: todoType,
+      type: GraphQLList(todoType),
       description: "Todo query",
-      resolve: () => {} // TODO: Implement API call
+      resolve: async () => Todo.find()
     }
   })
 });
