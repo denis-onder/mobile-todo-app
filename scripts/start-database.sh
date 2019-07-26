@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker run mongo:latest
+docker run -it -p 27017:27017 mongo:latest
